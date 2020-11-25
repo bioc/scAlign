@@ -32,7 +32,7 @@ install.packages('devtools')
 devtools::install_github(repo = 'quon-titative-biology/scAlign')
 library(scAlign)
 
-## Install Tensorflow 
+## Install Tensorflow
 library(tensorflow)
 install_tensorflow(version = "gpu") ## Removing version will install CPU version of Tensorflow
 ```

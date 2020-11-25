@@ -303,7 +303,7 @@ alignment_score <- function(data, source_labels, target_labels, nn=0){
 .check_tensorflow = function(){
   sess = NULL ## Appease R check
   tryCatch({
-    print(paste0("Found tf version: ", tf$version$VERSION))
+    message(paste0("Found tf version: ", tf$version$VERSION))
     with(tf$compat$v1$Session() %as% sess, {
       sess$run(tf$compat$v1$Print("", list("Passed"), "TensorFlow check: "))
     })
