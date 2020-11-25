@@ -303,9 +303,10 @@ alignment_score <- function(data, source_labels, target_labels, nn=0){
 .check_tensorflow = function(){
   sess = NULL ## Appease R check
   tryCatch({
-    # with(tf$compat$v1$Session() %as% sess, {
-      tf$compat$v1$constant("Hellow Tensorflow") #$sess$run(tf$compat$v1$Print("", list("Passed"), "TensorFlow check: "))
-    # })
+    print(paste0("Found tf version: ", tf$version$VERSION))
+    with(tf$compat$v1$Session() %as% sess, {
+      sess$run(tf$compat$v1$Print("", list("Passed"), "TensorFlow check: "))
+    })
   }, error=function(e) {
       stop("Error with system install of tensorflow, check R for Tensorflow docs.")
   })
