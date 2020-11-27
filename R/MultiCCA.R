@@ -17,16 +17,15 @@ RunMultiCCA <- function(
   num.ccs = 10,
   standardize = TRUE
 ) {
-  set.seed(42)
   num.sets <- length(mat.list)
   if(standardize){
     for (i in 1:num.sets){
-      mat.list[[i]] <- scale(mat.list[[i]], T, T)
+      mat.list[[i]] <- scale(mat.list[[i]], TRUE, TRUE)
     }
   }
   ws <- list()
   for (i in 1:num.sets){
-    ws[[i]] <- irlba(mat.list[[i]], nv = num.ccs)$v[, 1:num.ccs, drop = F]
+    ws[[i]] <- irlba(mat.list[[i]], nv = num.ccs)$v[, 1:num.ccs, drop = FALSE]
   }
   ws.init <- ws
   ws.final <- list()
