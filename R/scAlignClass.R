@@ -152,8 +152,7 @@ scAlignCreateObject = function(sce.objects,
       combined = RunCCA(seurat.objects[[names(sce.objects)[1]]],
                         seurat.objects[[names(sce.objects)[2]]],
                         features=genes.use,
-                        num.cc=ccs.compute,
-                        scale.data=TRUE)
+                        num.cc=ccs.compute)
       ## Load dim reduction into SCE object
       reducedDim(combined.sce, "CCA") =  Embeddings(combined, reduction = "cca")
       metadata(combined.sce)[["CCA.output"]] = Loadings(combined, reduction = "cca")
@@ -162,8 +161,7 @@ scAlignCreateObject = function(sce.objects,
       combined = RunCCA(seurat.objects[[names(sce.objects)[1]]],
                         seurat.objects[[names(sce.objects)[2]]],
                         genes.use=genes.use,
-                        num.cc=ccs.compute,
-                        scale.data=TRUE)
+                        num.cc=ccs.compute)
       ## Load dim reduction into SCE object
       reducedDim(combined.sce, "CCA") = GetCellEmbeddings(combined, "cca")
       metadata(combined.sce)[["CCA.output"]] = GetGeneLoadings(combined, reduction.type = "cca")

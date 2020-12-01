@@ -1,5 +1,5 @@
 Package: scAlign
-Version: 1.5.2
+Version: 1.5.4
 Date: 2019-02-11
 Title: An alignment and integration method for single cell genomics
 Description: An unsupervised deep learning method for data alignment, integration and estimation of per-cell differences in -omic data (e.g. gene expression) across datasets (conditions, tissues, species). See Johansen and Quon (2019) <doi:10.1101/504944> for more details.
@@ -21,7 +21,7 @@ Depends: R (>= 3.6), SingleCellExperiment (>= 1.4), Seurat (>= 2.3.4), tensorflo
 Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
 SystemRequirements: python (< 3.7), tensorflow
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 License: GPL-3
 LazyData: false
 Encoding: UTF-8
