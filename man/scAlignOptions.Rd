@@ -31,6 +31,8 @@ scAlignOptions(
 \arguments{
 \item{steps}{(default: 15000) Number of training iterations for neural networks.}
 
+\item{steps.decoder}{Number of training iterations for neural networks.}
+
 \item{batch.size}{(default: 150) Number of input samples per training batch.}
 
 \item{learning.rate}{(default: 1e-4) Initial learning rate for ADAM.}

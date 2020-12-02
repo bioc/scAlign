@@ -183,6 +183,7 @@ scAlignCreateObject = function(sce.objects,
 #' @return Options data.frame
 #'
 #' @param steps (default: 15000) Number of training iterations for neural networks.
+#' @param steps.decoder Number of training iterations for neural networks.
 #' @param batch.size (default: 150) Number of input samples per training batch.
 #' @param learning.rate (default: 1e-4) Initial learning rate for ADAM.
 #' @param log.every (default: 5000) Number of steps before saving results.
