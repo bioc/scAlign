@@ -85,7 +85,7 @@ Helper function to plot aligned data from the results of running scAlign().
                     run.encoder=TRUE,
                     run.decoder=FALSE,
                     log.results=FALSE,
-                    log.dir=file.path('~/models','gene_input'),
+                    log.dir=file.path(tempdir(),'gene_input'),
                     device="CPU")
 
  ## Plot alignment for 3 input types

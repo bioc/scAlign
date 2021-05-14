@@ -86,7 +86,7 @@ scAlign = scAlignMulti(scAlign,
                    supervised='none',
                    run.encoder=TRUE,
                    run.decoder=FALSE,
-                   log.dir=file.path('~/models','gene_input'),
+                   log.dir=file.path(tempdir(),'gene_input'),
                    device="CPU")
 
 }

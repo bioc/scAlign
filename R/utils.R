@@ -60,7 +60,7 @@
 #'                     run.encoder=TRUE,
 #'                     run.decoder=FALSE,
 #'                     log.results=FALSE,
-#'                     log.dir=file.path('~/models','gene_input'),
+#'                     log.dir=file.path(tempdir(),'gene_input'),
 #'                     device="CPU")
 #'
 #'  ## Plot alignment for 3 input types
@@ -176,7 +176,7 @@ gaussianKernel = function(data, data_shape, labels=NULL, method=NULL, perplexity
 #' @import ggplot2
 #'
 #' @keywords internal
-.plotTSNE = function(data, labels, file_out="~/scAlign_default_plot.png"){
+.plotTSNE = function(data, labels, file_out=file.path(tempdir(), "/scAlign_default_plot.png")){
     x=y=NULL ## Appease R checker, doesn't like ggplot2 aes() variables
     res = Rtsne(data, PCA=FALSE, verbose=FALSE)
     plot.me <- data.frame(x=res$Y[,1], y=res$Y[,2], labels=labels, stringsAsFactors=FALSE)

@@ -1,13 +1,12 @@
 context("scalign")
 
 test_that("scAlign halts on no input", {
-
   ## Run scAlign with high_var_genes
   expect_error(scAlign(encoder.data="scale.data",
                        supervised='none',
                        run.encoder=TRUE,
                        run.decoder=TRUE,
-                       log.dir=file.path(results.dir, 'models','gene_input'),
+                       log.dir=file.path(tempdir(), 'models','gene_input'),
                        device="CPU"))
 })
 
@@ -84,7 +83,7 @@ test_that("scAlign halts on no input", {
 #                        supervised='none',
 #                        run.encoder=TRUE,
 #                        run.decoder=FALSE,
-#                        log.dir=file.path('~/models_temp','gene_input'),
+#                        log.dir=file.path(tempdir(),'gene_input'),
 #                        device="CPU")
 #
 #   aligned_data  = reducedDim(scAlignCB, "ALIGNED-GENE")
