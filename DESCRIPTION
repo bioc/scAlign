@@ -1,5 +1,5 @@
 Package: scAlign
-Version: 1.11.0
+Version: 1.11.1
 Date: 2019-02-11
 Title: An alignment and integration method for single cell genomics
 Description: An unsupervised deep learning method for data alignment, integration and estimation of per-cell differences in -omic data (e.g. gene expression) across datasets (conditions, tissues, species). See Johansen and Quon (2019) <doi:10.1101/504944> for more details.
@@ -32,3 +32,4 @@ git_last_commit_date: 2019-05-02
 Date/Publication: 2019-05-02
 NeedsCompilation: no
 Packaged: 2019-05-03 03:13:41 UTC; biocbuild
+PackageStatus: Deprecated
